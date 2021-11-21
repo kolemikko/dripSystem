@@ -5,7 +5,7 @@ Arduino sketch running the water pumps on dutch bucket dripping system.
 ### Hardware
 
 - Arduino board
-- OLED screen
+- SSD1306 I2C OLED screen
 
 ### Required Arduino libraries:
 
