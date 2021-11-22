@@ -1,4 +1,5 @@
 #include "Display.h"
+#include "Pump.h"
 
 // Pump output pins
 const int pump1 = 9;
@@ -19,9 +20,3 @@ void loop()
   delay(3000);
 }
 
-void runPump(int pumpNumber, int time)
-{
-  digitalWrite(pumpNumber, HIGH);
-  delay(time);
-  digitalWrite(pumpNumber, LOW);
-}
