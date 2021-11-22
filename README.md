@@ -7,8 +7,4 @@ Arduino sketch running the water pumps on dutch bucket dripping system.
 - Arduino board
 - SSD1306 I2C OLED screen
 
-### Required Arduino libraries:
-
-- Wire
-- Adafruit_GFX
-- Adafruit_SSD1306
+Project is build and flashed with PlatformIO, it also handles library dependencies.
