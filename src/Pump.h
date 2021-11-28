@@ -1,6 +1,6 @@
-void runPump(int pumpNumber, int time, int speed)
+void runPump(int pumpNumber, int timeSec, int speed)
 {
   analogWrite(pumpNumber, speed);
-  delay(time);
+  delay(timeSec * 1000);
   analogWrite(pumpNumber, 0);
 }

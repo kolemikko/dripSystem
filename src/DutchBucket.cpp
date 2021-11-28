@@ -10,11 +10,18 @@ void setup()
   pinMode(pump1, OUTPUT);
 }
 
-void loop()
+void delayCounter(int delaySec)
 {
-  displayMessage("Pump started.");
-  runPump(pump1, 3000, 200);
-  displayMessage("Delay started.");
-  delay(3000);
+  for (int i = delaySec; i > 0; i--)
+  {
+    displayMessage("Paused for " + String(i / 60) + "m" + String(i % 60) + "s.");
+    delay(1000);
+  }
 }
 
+void loop()
+{
+  displayMessage("Pump running.");
+  runPump(pump1, 10, 200);
+  delayCounter(60 * 30);
+}
