@@ -22,6 +22,6 @@ void delayCounter(int delaySec)
 void loop()
 {
   displayMessage("Pump running.");
-  runPump(pump1, 10, 200);
-  delayCounter(60 * 60 * 2);
+  runPump(pump1, 15, 255);
+  delayCounter(60 * 60 * 4);
 }
