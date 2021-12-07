@@ -1,6 +1,6 @@
-# Dutch Bucket
+# Drip system
 
-Arduino sketch running the water pumps on dutch bucket dripping system.
+Arduino sketch running the water pumps on dripping system.
 
 ### Hardware
 
