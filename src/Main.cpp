@@ -1,8 +1,8 @@
 #include "Display.h"
 #include "Pump.h"
 
-// Pump output pins (PWM)
-const int pump1 = 5;
+// Pump output pins (digital)
+const int pump1 = 7;
 
 void setup()
 {
@@ -22,6 +22,6 @@ void delayCounter(int delaySec)
 void loop()
 {
   displayMessage("Pump running.");
-  runPump(pump1, 15, 255);
+  runPump(pump1, 15);
   delayCounter(60 * 60 * 4);
 }
