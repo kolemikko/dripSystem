@@ -2,26 +2,22 @@
 #include "Pump.h"
 
 // Pump output pins (digital)
-const int pump1 = 7;
+const int pump1 = 23;
 
-void setup()
-{
+#define uS_TO_S_MULTIPLIER 100000
+#define SLEEP_TIME 60 * 60 * 4
+
+void setup() {
   initDisplay();
   pinMode(pump1, OUTPUT);
+  esp_sleep_enable_timer_wakeup(SLEEP_TIME * uS_TO_S_MULTIPLIER);
 }
 
-void delayCounter(int delaySec)
-{
-  for (int i = delaySec; i > 0; i--)
-  {
-    displayMessage("Paused for " + String(i / 60) + "m" + String(i % 60) + "s.");
-    delay(1000);
-  }
-}
-
-void loop()
-{
+void loop() {
   displayMessage("Pump running.");
   runPump(pump1, 15);
-  delayCounter(60 * 60 * 4);
+  displayMessage("Going to sleep...");
+  delay(2000);
+  turnOffDisplay();
+  esp_deep_sleep_start();
 }
