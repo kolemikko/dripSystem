@@ -4,7 +4,7 @@
 // Pump output pins (digital)
 const int pump1 = 23;
 
-#define uS_TO_S_MULTIPLIER 100000
+#define uS_TO_S_MULTIPLIER 1000000
 #define SLEEP_TIME 60 * 60 * 4
 
 void setup() {
