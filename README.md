@@ -8,6 +8,6 @@ If you want something similar to run on Arduino board, please check the "arduino
 
 - Esp32 board
 - SSD1306 I2C OLED screen
-- 4.5V water pump
+- 4.5V water pump or relay to control external pump
 
 Project is build and flashed with PlatformIO which also handles library dependencies.
