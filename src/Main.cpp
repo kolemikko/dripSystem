@@ -13,7 +13,7 @@ void setup() {
   initDisplay();
   pinMode(pump1, OUTPUT);
   esp_sleep_enable_timer_wakeup(sleepTime * uS_TO_S_MULTIPLIER);
-  initWiFi();
+  // initWiFi();
   // initServer();
 }
 
